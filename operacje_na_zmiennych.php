@@ -24,7 +24,42 @@
     echo '$x nieidentyczne $y';
   }
 
+  echo '<br>';
+
+  echo gettype($x),'<br>'; //integer
+  echo gettype($y),'<br>'; //double
+
+/*
+  postinkrementacja $x++;
+  preinkrementacja ++$x;
+  postdekrementacja $x--;
+  predekrementacja --$x;
+*/
+
+  $x = 10;
+  $x = $x++; //10
+
+  $y=$x++;
+  // x = 11
+  // y = 10
+  echo $x,'<br>';
+  echo $y,'<hr>';
+
+  $x=1;
+  echo $x; //1
+  $x=$x++;
+  echo $x; //1
+  $x=++$x;
+  echo $x; //2
+  $y=++$x;
+  echo $x; //3
+  echo $y; //3
+  $y=$x++;
+  echo $x; //4
+  echo "$y<br>"; //3
 
 
 
-?>
+
+
+  ?>
