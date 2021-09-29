@@ -1,7 +1,7 @@
 <?php
-  echo '<pre>';
-  print_r ($_POST);
-  echo '</pre>';
+  // echo '<pre>';
+  // print_r ($_POST);
+  // echo '</pre>';
 
 if (!empty($_POST['name']) && !empty($_POST['geometricFigure'])) {
 
@@ -16,7 +16,7 @@ if (!empty($_POST['name']) && !empty($_POST['geometricFigure'])) {
       header('location: ../4_form.php');
       break;
   }
-  
+
 }else {
 
   ?>
