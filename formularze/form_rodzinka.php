@@ -49,8 +49,11 @@
         echo <<< AVERAGE
         <h3>Srednia wieku to $avg_2decimal</h3>
 AVERAGE;
+?>
+<br>
+<a href="form_rodzinka.php">Strona głowna</a>
+<?php
       }
-
      ?>
 
   </body>
