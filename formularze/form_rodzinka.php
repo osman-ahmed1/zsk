@@ -6,6 +6,11 @@
   </head>
   <body>
     <?php
+    if(isset($_GET['redirection'])){
+    ?>
+      <h2>Witaj z powrotem na stronie głównej</h2>
+    <?php
+    }
     if((!isset($_POST['person']) || empty($_POST['person'])) && !isset($_POST['buttonAvg']))
     {
     ?>
@@ -44,14 +49,19 @@
             $count++;
           }
         }
-        $avg /= $count;
-        $avg_2decimal = number_format($avg,2);
-        echo <<< AVERAGE
-        <h3>Srednia wieku to $avg_2decimal</h3>
-AVERAGE;
+        if($count>0){
+          $avg /= $count;
+          $avg_2decimal = number_format($avg,2);
+          echo <<< AVERAGE
+          <h3>Srednia wieku to $avg_2decimal</h3>
+  AVERAGE;
+    }else{
+        echo "<h3>Błędne dane</h3>";
+    }
+
 ?>
 <br>
-<a href="form_rodzinka.php">Strona głowna</a>
+<a href="form_rodzinka.php?redirection">Strona głowna</a>
 <?php
       }
      ?>
