@@ -28,11 +28,15 @@ echo date('L').'<br>'; // 0 - nie przestępny
 $lastYear =   mktime(0, 0, 0, 3, 0, 2000);
 echo $lastYear.'<br>';     // 951778800
 
-$today = mktime(0,0,0,date('m'),date('y'),date('d'));
+$today = mktime(0,0,0,date('m'),date('d'),date('y'));
 echo $today.'<br>';
 $year = $today/(60*60*24*365);
 echo (int)$year.'<br>'; //50
 
+// zeszły rok
+$lastYear = mktime(0,0,0,date('m'),date('d'),date('y')-1);
+$year = $lastYear/(60*60*24*365);
+echo (int)$year.'<br>'; //51
 
  ?>
 <script>
